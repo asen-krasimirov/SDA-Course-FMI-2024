@@ -22,7 +22,7 @@ vector<int> &countingSort(vector<int> &arr) {
         arrCpy.push_back(i);
     }
 
-    int *count = new int[256];
+    int *count = new int[256]{0};
     for (int i: arr) {
         count[i] = count[i] + 1;
     }
@@ -35,6 +35,8 @@ vector<int> &countingSort(vector<int> &arr) {
         arr[count[arrCpy[i] - 1]] = arrCpy[i];
         count[arrCpy[i]] = count[arrCpy[i]] - 1;
     }
+
+    delete[] count;
 
     return arr;
 }
