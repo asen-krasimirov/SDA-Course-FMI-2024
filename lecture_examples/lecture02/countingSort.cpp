@@ -3,31 +3,21 @@
 
 using namespace std;
 
-/*
-int findBiggestNumInVector(vector<int> &arr) {
-    int biggest = -1316134912;
-    for (int curNum : arr) {
-        if (curNum > biggest) biggest = curNum;
-    }
-
-    return biggest;
-}
-*/
-
 vector<int> &countingSort(vector<int> &arr) {
-    vector<int> arrCpy;
+    vector<int> arrCpy(arr.size());
 
-    arrCpy.reserve(arr.size()); /* optimization */
-    for (int i: arr) {
-        arrCpy.push_back(i);
+    int max = arr[0];
+    for (int i = 0; i < arr.size(); ++i) {
+        if (arr[i] > max) max = arr[i];
+        arrCpy[i] = arr[i];
     }
 
-    int *count = new int[256]{0};
+    int *count = new int[max + 1]{0};
     for (int i: arr) {
         count[i] = count[i] + 1;
     }
 
-    for (int i = 1; i < 256; ++i) {
+    for (int i = 1; i < max; ++i) {
         count[i] += count[i - 1];
     }
 
@@ -48,7 +38,8 @@ void printArray(vector<int> &arr) {
 }
 
 int main() {
-    vector<int> arr = {34, 44, 27, 12, 37, 10, 47, 30, 20, 41, 15, 33, 14, 29};
+//    vector<int> arr = {34, 44, 27, 12, 37, 10, 47, 30, 20, 41, 15, 33, 14, 29};
+    vector<int> arr = {6, 7, 5};
 
     countingSort(arr);
     printArray(arr);
