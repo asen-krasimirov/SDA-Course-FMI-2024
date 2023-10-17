@@ -12,21 +12,22 @@ vector<int> &countingSort(vector<int> &arr) {
         arrCpy[i] = arr[i];
     }
 
-    int *count = new int[max + 1]{0};
+//    int *count = new int[max + 1]{0};
+    vector<int> count(max + 1);
     for (int i: arr) {
         count[i] = count[i] + 1;
     }
 
-    for (int i = 1; i < max; ++i) {
+    for (int i = 1; i <= max; ++i) {
         count[i] += count[i - 1];
     }
 
     for (int i = arr.size() - 1; i >= 0; --i) {
-        arr[count[arrCpy[i] - 1]] = arrCpy[i];
+        arr[count[arrCpy[i]] - 1] = arrCpy[i];
         count[arrCpy[i]] = count[arrCpy[i]] - 1;
     }
 
-    delete[] count;
+//    delete[] count;
 
     return arr;
 }
@@ -39,7 +40,7 @@ void printArray(vector<int> &arr) {
 
 int main() {
 //    vector<int> arr = {34, 44, 27, 12, 37, 10, 47, 30, 20, 41, 15, 33, 14, 29};
-    vector<int> arr = {6, 7, 5};
+    vector<int> arr = {5, 7, 6};
 
     countingSort(arr);
     printArray(arr);
