@@ -30,7 +30,9 @@ int main() {
             teamScore += devs[i];
             teams[teamIdx].second.push_back(devs[i++]);
         }
-        teams[teamIdx++].first = teamScore;
+        if (teams[teamIdx].first <= 0) teams[teamIdx].first = 0;
+        teams[teamIdx].first += teamScore;
+        if (teamIdx < T - 1) teamIdx++;
     }
 
     sort(teams.begin(), teams.end());
@@ -47,8 +49,14 @@ int main() {
         auto biggestSet = max_element(teams.begin(), teams.end());
 
         if (biggestSet->second.size() == 1) break;
-//        smallestSet->second.push_back()
+        auto elem = *min_element(biggestSet->second.begin(), biggestSet->second.end());
+        smallestSet->second.push_back(elem);
+        smallestSet->first += elem;
+        biggestSet->second.erase(remove(biggestSet->second.begin(), biggestSet->second.end(), elem), biggestSet->second.end());
+        biggestSet->first -= elem;
     }
+
+    cout << max_element(teams.begin(), teams.end())->first;
 
     return 0;
 }
