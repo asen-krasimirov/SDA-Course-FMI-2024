@@ -6,7 +6,7 @@
 using namespace std;
 
 /*
- * Not 100/100, view Koceto's Solution for 100/100 solution
+ * Not 100/100, view Koceto's Solution for 100/100 solution (or solution02)
  * Hackerrank: https://www.hackerrank.com/contests/sda-homework-3/challenges/challenge-2674/problem
  * */
 
