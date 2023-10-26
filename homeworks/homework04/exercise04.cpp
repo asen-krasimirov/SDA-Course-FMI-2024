@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/* 40/100 */
 
 int main() {
 
