@@ -3,19 +3,18 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
-#include <list>
 
 using namespace std;
 
-
 int main() {
+
     long long N, Q, K;
     cin >> N >> Q >> K;
 
     string command;
     long long key, val;
 
-    list<pair<long long, long long>> hash;
+    vector<pair<long long, long long>> hash;
 
     long long overloadCtr = 1;
 
@@ -31,11 +30,11 @@ int main() {
                 if (elem.first == key) {
                     found = true;
 
-                    auto position = hash.begin();
-                    advance(position, pos);
-                    hash.erase(position);
+                    auto positionItr = hash.begin();
+                    for (int i = 0; i < pos; ++i) positionItr++;
+                    hash.erase(positionItr);
 
-                    hash.push_front(pair<long long, long long>(key, val));
+                    hash.insert(hash.begin(), pair<long long, long long>(key, val));
                     break;
                 }
 
@@ -45,7 +44,7 @@ int main() {
                     hash.pop_back();
                 }
 
-                hash.push_front(pair<long long, long long>(key, val));
+                hash.insert(hash.begin(), pair<long long, long long>(key, val));
             }
 
         }
@@ -62,12 +61,11 @@ int main() {
 
                     cout << val << endl;
 
-                    auto position = hash.begin();
-                    advance(position, pos);
-                    hash.erase(position);
+                    auto positionItr = hash.begin();
+                    for (int i = 0; i < pos; ++i) positionItr++;
+                    hash.erase(positionItr);
 
-                    hash.push_front(pair<long long, long long>(key, val));
-
+                    hash.insert(hash.begin(), pair<long long, long long>(key, val));
                     break;
                 }
 

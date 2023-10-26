@@ -7,8 +7,12 @@
 
 using namespace std;
 
+/* 40/100 */
+
+
 
 int main() {
+
     long long N, Q, K;
     cin >> N >> Q >> K;
 
@@ -24,58 +28,42 @@ int main() {
 
         if (command == "put") {
             cin >> key >> val;
-
-            bool found = false;
-            long long pos = 0;
+            bool isFound = false;
             for (auto elem: hash) {
                 if (elem.first == key) {
-                    found = true;
+                    isFound = true;
 
-                    auto position = hash.begin();
-                    advance(position, pos);
-                    hash.erase(position);
+                    hash.remove(elem);
+                    hash.push_front(elem);
 
-                    hash.push_front(pair<long long, long long>(key, val));
                     break;
                 }
-
-                pos++;
-            } if (!found) {
+            } if (!isFound) {
                 if (hash.size() == N) {
                     hash.pop_back();
                 }
 
-                hash.push_front(pair<long long, long long>(key, val));
+                hash.push_front(pair<long long, long long>(key ,val));
             }
-
         }
         else if (command == "get") {
             cin >> key;
 
-            bool found = false;
-            long long pos = 0;
+            bool isFound = false;
             for (auto elem: hash) {
                 if (elem.first == key) {
-                    found = true;
+                    isFound = true;
 
-                    val = elem.second;
+                    hash.remove(elem);
+                    hash.push_front(elem);
 
-                    cout << val << endl;
-
-                    auto position = hash.begin();
-                    advance(position, pos);
-                    hash.erase(position);
-
-                    hash.push_front(pair<long long, long long>(key, val));
+                    cout << elem.second << endl;
 
                     break;
                 }
-
-                pos++;
-            } if (!found) {
+            } if (!isFound) {
                 cout << "-1" << endl;
             }
-
         }
 
         if (overloadCtr++ % K == 0) {
