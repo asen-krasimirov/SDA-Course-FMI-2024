@@ -17,7 +17,7 @@ int main() {
 //    long long vals[100001]{ -1 };
     vector<long long> vals(10001, -1);
 //    list<long long> keys;
-    deque<long long> keys;
+    deque<long long> keys;  // !!! gives 100/100 only for deque solution, with list is 1:1 but gives 90/100
 
     for (int i = 1; i <= Q; ++i) {
         cin >> command;
