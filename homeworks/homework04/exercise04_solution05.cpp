@@ -1,10 +1,11 @@
 #include <iostream>
+#include <vector>
 //#include <list>
 #include <deque>
 
 using namespace std;
 
-/* 60/100 */
+/* 100/100 */
 
 int main() {
     long long N, Q, K;
@@ -13,7 +14,8 @@ int main() {
     string command;
     long long key, val;
 
-    long long vals[100001]{ 0 };
+//    long long vals[100001]{ -1 };
+    vector<long long> vals(10001, -1);
 //    list<long long> keys;
     deque<long long> keys;
 
@@ -24,9 +26,9 @@ int main() {
             cin >> key >> val;
             if (N == 0) continue;
 
-            if (vals[key] == 0) {
+            if (vals[key] == -1) {
                 if (keys.size() == N) {
-                    vals[keys.back()] = 0;
+                    vals[keys.back()] = -1;
                     keys.pop_back();
                 }
 
@@ -47,7 +49,7 @@ int main() {
         else if (command == "get") {
             cin >> key;
 
-            if (vals[key] == 0) {
+            if (vals[key] == -1) {
                 cout << "-1" << endl;
             }
             else {
@@ -63,7 +65,7 @@ int main() {
         }
 
         if (i % K == 0 && !keys.empty()) {
-            vals[keys.back()] = 0;
+            vals[keys.back()] = -1;
             keys.pop_back();
         }
     }
