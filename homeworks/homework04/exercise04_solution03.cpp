@@ -9,10 +9,7 @@ using namespace std;
 
 /* 40/100 */
 
-
-
 int main() {
-
     long long N, Q, K;
     cin >> N >> Q >> K;
 
