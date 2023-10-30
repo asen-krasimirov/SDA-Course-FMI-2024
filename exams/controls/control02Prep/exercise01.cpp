@@ -8,8 +8,6 @@
 #include <stack>
 using namespace std;
 
-/* not tested */
-
 struct Node
 {
     int value;
@@ -209,16 +207,18 @@ void SinglyLinkedList::replace(int X) {
     Node *current = head;
     while (current != nullptr) {
         if (current->value == X) {
-            Node *original = current;
-            current->value = X;
+            current->value = 1;
             int ctr = 1;
             while (ctr++ < X) {
-                Node *nextToAdd = new Node(X);
+                Node *nextToAdd = new Node(1);
+                Node *nextForNextToAdd = current->next;
                 current->next = nextToAdd;
-                current = nextToAdd;
+                nextToAdd->next = nextForNextToAdd;
+                if (current == tail) {
+                    tail = nextToAdd;
+                }
+                size++;
             }
-            current->next = original->next;
-            break;
         }
         current = current->next;
     }
