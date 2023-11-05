@@ -15,23 +15,23 @@ int main() {
         cin >> players[i];
     }
 
-    stack<pair<size_t, size_t>> bestDays;
+    stack<pair<size_t, size_t>> daysCounter;
 
     for (size_t i = 0; i < N; i++) {
         curMaxDays = 0;
         curPlayer = players[i];
 
-        while (!bestDays.empty() && bestDays.top().first >= curPlayer) {
-            curMaxDays = max(curMaxDays, bestDays.top().second);
-            bestDays.pop();
+        while (!daysCounter.empty() && daysCounter.top().first >= curPlayer) {
+            curMaxDays = max(curMaxDays, daysCounter.top().second);
+            daysCounter.pop();
         }
 
-        if (!bestDays.empty()) {
-            bestDays.top().second = max(curMaxDays, bestDays.top().second) + 1;
-            maxDays = max(maxDays, bestDays.top().second);
+        if (!daysCounter.empty()) {
+            daysCounter.top().second = max(curMaxDays, daysCounter.top().second) + 1;
+            maxDays = max(maxDays, daysCounter.top().second);
         }
 
-        bestDays.push({ curPlayer, 0 });
+        daysCounter.push({ curPlayer, 0 });
     }
 
     cout << maxDays;
