@@ -6,54 +6,86 @@
 #include <climits>
 using namespace std;
 
-long long maxPath = INT_MIN;
-
 struct Node {
-    long long val;
-    Node *left, *right;
-} nodes[4000001];
+    long long childCount;
+    Node *left = nullptr, *right =nullptr, *parent = nullptr;
+} nodes[1000000];
 
-long long findMaxPath(Node *node) {
-    if (node == nullptr) {
+long long setChildCount(Node *current) {
+    if (current == nullptr) {
         return 0;
     }
 
-    long long maxLeft = max((long long) 0, findMaxPath(node->left));
-    long long maxRight = max((long long) 0, findMaxPath(node->right));
+    current->childCount = setChildCount(current->left) + setChildCount(current->right) + 1;
 
-    maxPath = max(maxPath, node->val + maxLeft + maxRight);
+    return current->childCount;
+}
 
-    return node->val + max(maxLeft, maxRight);
+long long findBiggestSplit(Node *node) {
+    if (!node->parent) {
+        if (!node->left) {
+            if (!node->right) {
+                return 0;
+            } else {
+                return node->right->childCount;
+            }
+        } else if (!node->right) {
+            return node->left->childCount;
+        } else {
+            return node->left->childCount * node->right->childCount;
+        }
+    }
+
+    if (!node->left) {
+        if (!node->right) {
+            return nodes[0].childCount - 1;
+        } else {
+            return (nodes[0].childCount - node->childCount) * node->right->childCount;
+        }
+    } else {
+        if (!node->right) {
+            return (nodes[0].childCount - node->childCount) * node->left->childCount;
+        }
+    }
+
+    if (node->left && node->right) {
+        return (nodes[0].childCount - node->childCount) * node->left->childCount * node->right->childCount;
+    }
+
+    return 0;
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+    long long N, leftIdx, rightIdx, biggestSplit = INT_MIN;
 
-    long long N, val, leftIdx, rightIdx;
     cin >> N;
 
     for (long long i = 0; i < N; ++i) {
-        cin >> val >> leftIdx >> rightIdx;
-
-        nodes[i].val = val;
+        cin >> leftIdx >> rightIdx;
 
         if (leftIdx != -1) {
             nodes[i].left = &nodes[leftIdx];
+            nodes[i].left->parent = &nodes[i];
         } else {
             nodes[i].left = nullptr;
         }
 
+
         if (rightIdx != -1) {
             nodes[i].right = &nodes[rightIdx];
+            nodes[i].right->parent = &nodes[i];
         } else {
             nodes[i].right = nullptr;
         }
     }
 
-    findMaxPath(&nodes[0]);
+    setChildCount(&nodes[0]);
 
-    cout << maxPath;
+    for (long long i = 0; i < N; ++i) {
+        biggestSplit = max(biggestSplit, findBiggestSplit(&nodes[i]));
+    }
+
+    cout << biggestSplit;
 
     return 0;
 }
