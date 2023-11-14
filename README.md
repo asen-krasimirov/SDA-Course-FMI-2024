@@ -4,6 +4,7 @@
 ### Control Exam contest links ( and solutions* ):
 - <a href="https://www.hackerrank.com/contests/test-1697304732/challenges">Exam 01</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control01">solutions</a>) <br/>
 - <a href="https://www.hackerrank.com/contests/2-2023-2024/challenges">Exam 02</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control02">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/kontrolno-3">Exam 03</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control03">solutions</a>) <br/>
 
 More Content:
 ######  Lab Exercises | Homework contest links ( and solutions* ):
