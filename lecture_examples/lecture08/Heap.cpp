@@ -82,9 +82,7 @@ private:
         }
     }
 
-
 public:
-
     void add(int element) {
         heap.push_back(element);
         shiftUp(heap.size() - 1);
@@ -111,6 +109,5 @@ public:
         heap.pop_back();
         shiftDown(heap[0]);
     }
-
 
 };
