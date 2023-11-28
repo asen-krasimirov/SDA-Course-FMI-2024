@@ -107,7 +107,7 @@ public:
 
         swap(heap[0], heap[heap.size() - 1]);
         heap.pop_back();
-        shiftDown(heap[0]);
+        shiftDown(0);
     }
 
 };
