@@ -5,6 +5,7 @@
 - <a href="https://www.hackerrank.com/contests/test-1697304732/challenges">Exam 01</a> ( Sorting Algorithms ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control01">solutions</a>) <br/>
 - <a href="https://www.hackerrank.com/contests/2-2023-2024/challenges">Exam 02</a> ( Linked List && Binary Search ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control02">solutions</a>) <br/>
 - <a href="https://www.hackerrank.com/contests/kontrolno-3">Exam 03</a> ( Queue and Stack && Binary Search Tree ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control03">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/sda-20232024-test-4/challenges">Exam 04</a> ( AVL and Red-Black Trees && Heap ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control04">solutions</a>) <br/>
 
 More Content:
 ######  Lab Exercises | Homework contest links ( and solutions* ):
