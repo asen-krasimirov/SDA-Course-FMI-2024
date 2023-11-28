@@ -96,7 +96,7 @@ public:
         return heap[0];
     }
 
-    int pop() {
+    void pop() {
         if (!heap.empty()) {
 //            throw invalid_argument("heap is empty");
         }
