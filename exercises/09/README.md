@@ -5,3 +5,4 @@
 - Task 03 (128. Longest Consecutive Sequence): https://leetcode.com/problems/longest-consecutive-sequence/submissions/
 - Task 04 (0-1 подмасив): https://www.hackerrank.com/contests/sda-homework-9/challenges/0-1-1/problem
 - Task 05 (187. Repeated DNA Sequences): https://leetcode.com/problems/repeated-dna-sequences/
+- Implementation of Consistent Hash
