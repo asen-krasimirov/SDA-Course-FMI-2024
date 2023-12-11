@@ -10,6 +10,8 @@
 
 #include "ConnectedComponents.cpp"
 
+#include "CycleInUndirectedGraph.cpp"
+
 int main() {
 
     Graph g(9, false);
@@ -53,6 +55,17 @@ int main() {
     cout << connectedComponents.areInSameComponent(0, 1) << endl;
     cout << connectedComponents.areInSameComponent(7, 8) << endl;
     cout << connectedComponents.areInSameComponent(0, 8) << endl;
+
+    cout << endl;
+
+    cout << "Cycle in undirected graph:" << endl;
+    Graph g1(3, false);
+    g1.addEdge(0, 1);
+
+    CycleInUndirectedGraph cycleInUndirectedGraph(g);
+    CycleInUndirectedGraph cycleInUndirectedGraph1(g1);
+    cout << cycleInUndirectedGraph.hasCycle() << endl;
+    cout << cycleInUndirectedGraph1.hasCycle() << endl;
 
     cout << endl;
 
