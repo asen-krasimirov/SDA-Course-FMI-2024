@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 
 using namespace std;
@@ -10,10 +12,7 @@ private:
     bool directed;
 
 public:
-
-    Graph(int V, bool directed) : numVertices(V), adjList(new vector<int>[V]), directed(directed) {
-
-    }
+    Graph(int V, bool directed) : numVertices(V), adjList(new vector<int>[V]), directed(directed) {}
 
     void addEdge(int v, int w) {
         if (!directed) {
