@@ -12,6 +12,8 @@
 
 #include "CycleInUndirectedGraph.cpp"
 
+#include "CycleInDirectedGraph.cpp"
+
 int main() {
 
     Graph g(9, false);
@@ -66,6 +68,18 @@ int main() {
     CycleInUndirectedGraph cycleInUndirectedGraph1(g1);
     cout << cycleInUndirectedGraph.hasCycle() << endl;
     cout << cycleInUndirectedGraph1.hasCycle() << endl;
+
+    cout << endl;
+
+    cout << "Cycle in undirected graph:" << endl;
+    Graph g2(4, true);
+    g2.addEdge(0, 1);
+    g2.addEdge(1, 3);
+    g2.addEdge(3, 2);
+    g2.addEdge(2, 1);
+
+    CycleInDirectedGraph cycleInDirectedGraph(g2);
+    cout << cycleInDirectedGraph.hasCycle() << endl;
 
     cout << endl;
 
