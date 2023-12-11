@@ -36,10 +36,8 @@ public:
 
     void printInTopologicalOrder() {
         while (!topoOrder.empty()) {
-            int v = topoOrder.top();
+            cout << topoOrder.top();
             topoOrder.pop();
-
-            cout << v;
 
             if (topoOrder.size() > 0) {
                 cout << " -> ";
