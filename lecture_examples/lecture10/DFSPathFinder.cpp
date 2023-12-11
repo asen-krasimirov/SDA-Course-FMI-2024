@@ -27,12 +27,12 @@ private:
     }
 
 public:
-    DFSPathFinder(Graph &g) : g(g), visited(g.vertices()), pathTo(g.vertices()) {
+    DFSPathFinder(Graph &g, int v) : g(g), visited(g.vertices()), pathTo(g.vertices()) {
         for (int i = 0; i < g.vertices(); ++i) {
             pathTo[i] = i;
         }
 
-        dfs(0); // paths start from 0
+        dfs(v); // paths start from v
     }
 
     void printPathTo(int v) {

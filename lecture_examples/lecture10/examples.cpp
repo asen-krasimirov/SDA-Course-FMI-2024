@@ -32,8 +32,8 @@ int main() {
     cout << endl;
 
     cout << "PathFinder:" << endl;
-    DFSPathFinder pathFinder(g);
-    pathFinder.printPathTo(6);  // 0 -> 1 -> 2 -> 4 -> 5 -> 6
+    DFSPathFinder pathFinder(g, 0); // starts from 0
+    pathFinder.printPathTo(6);      // 0 -> 1 -> 2 -> 4 -> 5 -> 6
 
     return 0;
 }
