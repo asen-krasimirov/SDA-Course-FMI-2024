@@ -14,6 +14,8 @@
 
 #include "CycleInDirectedGraph.cpp"
 
+#include "TopologicalSort.cpp"
+
 int main() {
 
     Graph g(9, false);
@@ -80,6 +82,23 @@ int main() {
 
     CycleInDirectedGraph cycleInDirectedGraph(g2);
     cout << cycleInDirectedGraph.hasCycle() << endl;
+
+    cout << endl;
+
+    cout << "Topological Sort:" << endl;
+    Graph g3(7, true);
+    g3.addEdge(0, 1);
+    g3.addEdge(0, 2);
+    g3.addEdge(1, 2);
+    g3.addEdge(1, 5);
+    g3.addEdge(6, 1);
+    g3.addEdge(6, 5);
+    g3.addEdge(5, 3);
+    g3.addEdge(2, 3);
+    g3.addEdge(5, 4);
+
+    TopologicalSort topologicalSort(g3);
+    topologicalSort.printInTopologicalOrder();
 
     cout << endl;
 
