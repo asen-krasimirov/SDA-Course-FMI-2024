@@ -8,9 +8,11 @@
 
 #include "BFSShortestPathFinder.cpp"
 
+#include "ConnectedComponents.cpp"
+
 int main() {
 
-    Graph g(7, false);
+    Graph g(9, false);
 
     g.addEdge(0, 1);
     g.addEdge(0, 2);
@@ -20,6 +22,7 @@ int main() {
     g.addEdge(3, 4);
     g.addEdge(4, 5);
     g.addEdge(5, 6);
+    g.addEdge(7, 8);
 
 //    cout << "DFS: " << endl;
 //    DFSRecursiveTraversal dfs(g);
@@ -42,6 +45,14 @@ int main() {
     cout << "Shortest Path:" << endl;
     BFSShortestPathFinder shortestPathFinder(g, 0);
     cout << shortestPathFinder.getMinDist(6);
+
+    cout << endl;
+
+    cout << "Connected Components:" << endl;
+    ConnectedComponents connectedComponents(g);
+    cout << connectedComponents.areInSameComponent(0, 1) << endl;
+    cout << connectedComponents.areInSameComponent(7, 8) << endl;
+    cout << connectedComponents.areInSameComponent(0, 8) << endl;
 
     cout << endl;
 
