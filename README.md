@@ -20,6 +20,7 @@ More Content:
 08. Heap: <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/08">Lab</a> | <a href="https://www.hackerrank.com/contests/sda-hw-8-2023/challenges">Homework 08</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework08">solutions</a>) <br/>
 09. Hash Tables: <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/09">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-9-2023/challenges">Homework 09</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework09">solutions</a>) <br/>
 10. Graphs: <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/10">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-10-2023/challenges">Homework 10</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework10">solutions</a>) <br/>
+11. Shortest Path in Graph: <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/11">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-11-2023/challenges">Homework 11</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework11">solutions</a>) <br/>
 
 ###### * -> Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
 ###### ** -> Lab Exercises from Viktor Varbanov's seminars. ( <a href="https://github.com/ViktorGV">github</a> )
