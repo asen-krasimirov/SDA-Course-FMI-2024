@@ -4,7 +4,7 @@
 #include <vector>
 #include <stack>
 
-#include "Graph.cpp"
+#include "WeightedDirectedGraph.cpp"
 
 using namespace std;
 
@@ -13,14 +13,14 @@ class TopologicalSort {
 private:
     vector<bool> visited;
     stack<int> topoOrder;
-    Graph &g;
+    WeightedDirectedGraph &g;
 
     void dfs(int v) {
         visited[v] = true;
 
-        for (int n : g.adj(v)) {
-            if (!visited[n]) {
-                dfs(n);
+        for (auto n : g.adj(v)) {
+            if (!visited[n.to]) {
+                dfs(n.to);
             }
         }
 
@@ -28,7 +28,7 @@ private:
     }
 
 public:
-    TopologicalSort(Graph &g) : g(g), visited(g.vertices()) {
+    TopologicalSort(WeightedDirectedGraph &g) : g(g), visited(g.vertices()) {
         for (int i = 0; i < g.vertices(); ++i) {
             if (!visited[i]) {
                 dfs(i);
@@ -45,5 +45,9 @@ public:
                 cout << " -> ";
             }
         }
+    }
+
+    stack<int>& getTopoOrder() {
+        return topoOrder;
     }
 };
