@@ -8,27 +8,31 @@ using namespace std;
 int N, M, x, y, typeQ, Q;
 const int MAX = 1000000;
 
-int parent[MAX], depth[MAX];
+int parents[MAX], depth[MAX];
 
-int Find(int x) {
-    if(parent[x] == x) {
-        return x;
+int Find(int v) {
+    if (v == parents[v]) {
+        return v;
     }
-    return parent[x] = Find(parent[x]);
+
+    return parents[v] = Find(parents[v]);
 }
 
-void Union(int x, int y) {
-    int root1 = Find(x);
-    int root2 = Find(y);
-    if(root1 == root2) {
-        return;
+void Union(int a, int b) {
+    a = Find(a);
+    b = Find(b);
+
+    if (a != b) {
+        if (depth[a] < depth[b]) {
+            swap(a, b);
+        }
+
+        parents[b] = a;
+
+        if (depth[a] == depth[b]) {
+            depth[a]++;
+        }
     }
-    if(depth[root1] > depth[root2])
-        swap(root1, root2);
-    if(depth[root1] == depth[root2]) {
-        depth[root2]++;
-    }
-    parent[root1] = root2;
 }
 
 int main() {
@@ -38,7 +42,7 @@ int main() {
     cin >> N >> M;
 
     for (int i = 0; i < N; ++i) {
-        parent[i] = i;
+        parents[i] = i;
     }
 
     for (int i = 0; i < M; ++i) {
