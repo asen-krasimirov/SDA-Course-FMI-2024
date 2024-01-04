@@ -12,28 +12,33 @@ struct Key {
 };
 
 const size_t MAX_SIZE = 2 * 1e5 + 5;
-vector<pair<Key, pair<size_t, size_t>>> graph;
-size_t parent[MAX_SIZE], depth[MAX_SIZE];
+size_t parents[MAX_SIZE], depth[MAX_SIZE];
 
-int Find(int x) {
-    if(parent[x] == x) {
-        return x;
+vector<pair<Key, pair<size_t, size_t>>> graph;
+
+int Find(int v) {
+    if (v == parents[v]) {
+        return v;
     }
-    return parent[x] = Find(parent[x]);
+
+    return parents[v] = Find(parents[v]);
 }
 
-void Union(int x, int y) {
-    int root1 = Find(x);
-    int root2 = Find(y);
-    if(root1 == root2) {
-        return;
+void Union(int a, int b) {
+    a = Find(a);
+    b = Find(b);
+
+    if (a != b) {
+        if (depth[a] < depth[b]) {
+            swap(a, b);
+        }
+
+        parents[b] = a;
+
+        if (depth[a] == depth[b]) {
+            depth[a]++;
+        }
     }
-    if(depth[root1] > depth[root2])
-        swap(root1, root2);
-    if(depth[root1] == depth[root2]) {
-        depth[root2]++;
-    }
-    parent[root1] = root2;
 }
 
 void kruskal() {
@@ -64,7 +69,7 @@ int main() {
     }
 
     for (size_t i = 0; i < N; ++i) {
-        parent[i] = i;
+        parents[i] = i;
     }
 
     kruskal();
