@@ -7,7 +7,7 @@ int Find(int n) {
         return n;
     }
 
-    return parents[n] = Find(n);
+    return parents[n] = Find(parents[n]);
 }
 
 int Union(int v, int w) {
