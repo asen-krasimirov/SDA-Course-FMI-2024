@@ -5,4 +5,5 @@
 - 
 2. Minimum Spanning Three in Graph:
 - Task 01 ( "Преброяване на области" ): https://www.hackerrank.com/contests/sda-test6-2022-2023-iythgbeu3/challenges/challenge-2351/problem
+- Task 02 ( "Проверка на път" ): https://www.hackerrank.com/contests/sda-test6-2022-2023-iythgbeu3/challenges/challenge-3826/problem
 - Union-Find implementation
