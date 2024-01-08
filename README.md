@@ -2,11 +2,13 @@
 ## A repository for uploading exercises from the FMI SDA (Data Structures and Algorithms) Course 2023-2024.
 
 ### Control Exam contest links ( and solutions* ):
-- <a href="https://www.hackerrank.com/contests/test-1697304732/challenges">Exam 01</a> ( Sorting Algorithms ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control01">solutions</a>) <br/>
-- <a href="https://www.hackerrank.com/contests/2-2023-2024/challenges">Exam 02</a> ( Linked List && Binary Search ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control02">solutions</a>) <br/>
-- <a href="https://www.hackerrank.com/contests/kontrolno-3">Exam 03</a> ( Queue and Stack && Binary Search Tree ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control03">solutions</a>) <br/>
-- <a href="https://www.hackerrank.com/contests/sda-20232024-test-4/challenges">Exam 04</a> ( AVL and Red-Black Trees && Heap ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control04">solutions</a>) <br/>
-- <a href="https://www.hackerrank.com/contests/5-2023-2024/challenges">Exam 05</a> ( Hash Tables && Graphs ) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control05">solutions</a>) <br/>
+<pre>
+- <a href="https://www.hackerrank.com/contests/test-1697304732/challenges">Exam 01</a> (Sorting Algorithms) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control01">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/2-2023-2024/challenges">Exam 02</a> (Linked List && Binary Search) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control02">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/kontrolno-3">Exam 03</a> (Queue and Stack && Binary Search Tree) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control03">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/sda-20232024-test-4/challenges">Exam 04</a> (AVL and Red-Black Trees && Heap) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control04">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/5-2023-2024/challenges">Exam 05</a> (Hash Tables && Graphs) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control05">solutions</a>) <br/>
+</pre>
 
 More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
@@ -24,5 +26,6 @@ More Content:
 11. Shortest Path in Graph:          <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/11">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-11-2023/challenges">Homework 11</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework11">solutions</a>) <br/>
 12. Minimum Spanning Tree in Graph:  <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/12">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-12-2023/challenges">Homework 12</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework12">solutions</a>) <br/>
 </pre>
-###### * -> Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
-###### ** -> Lab Exercises from Viktor Varbanov's seminars. ( <a href="https://github.com/ViktorGV">github</a> )
+###### * Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
+###### ** Lab Exercises from Viktor Varbanov's seminars. ( <a href="https://github.com/ViktorGV">github</a> )
+###### *** In case of discrepancy, write to the contributors.
