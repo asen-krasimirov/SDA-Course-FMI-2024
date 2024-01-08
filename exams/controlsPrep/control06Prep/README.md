@@ -1,6 +1,9 @@
 ### Contest Links ( AVL and Red-Black Trees && Heap ):
 
 1. Shortest Path in Graph:
+- Task 05 ( " "): https://www.hackerrank.com/contests/test7-sda-soft-eng/challenges/challenge-1771/problem
+- Task 06 ( "Агенция Пътна Инфраструктура" ): https://www.hackerrank.com/contests/sda-2022-2023-test7-123-43/challenges/shortest-tour/problem
+- Task 07 ( "Суеверия" ): https://www.hackerrank.com/contests/sda-2020-2021-test12-12ws4dw/challenges/challenge-2817/problem
 - Dijkstra implementation
 
 2. Minimum Spanning Three in Graph:
