@@ -10,6 +10,8 @@
 - <a href="https://www.hackerrank.com/contests/5-2023-2024/challenges">Exam 05</a> (Hash Tables && Graphs) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control05">solutions</a>) <br/>
 </pre>
 
+You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
+
 More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
 <pre>
