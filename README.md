@@ -8,6 +8,7 @@
 - <a href="https://www.hackerrank.com/contests/kontrolno-3">Exam 03</a> (Queue and Stack && Binary Search Tree) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control03">solutions</a>) <br/>
 - <a href="https://www.hackerrank.com/contests/sda-20232024-test-4/challenges">Exam 04</a> (AVL and Red-Black Trees && Heap) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control04">solutions</a>) <br/>
 - <a href="https://www.hackerrank.com/contests/5-2023-2024/challenges">Exam 05</a> (Hash Tables && Graphs) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control05">solutions</a>) <br/>
+- <a href="https://www.hackerrank.com/contests/6-20232024/challenges">Exam 06</a> (Shortest Path in Graph && Minimum Spanning Three in Graph) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control06">solutions</a>) <br/>
 </pre>
 
 You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
