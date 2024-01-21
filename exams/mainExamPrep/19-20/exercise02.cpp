@@ -5,101 +5,12 @@
 #include <algorithm>
 using namespace std;
 
-int N, Q, elem;
-vector<int> arr;
-
-bool bs(int x) {
-    int l = 0, r = arr.size() - 1, m;
-
-    while (l < r) {
-        m = l + (r - l) / 2;
-
-        if (arr[m] == x) {
-            return true;
-        }
-
-        if (arr[m] < x) {
-            l = m + 1;
-        } else {
-            r = m - 1;
-        }
-    }
-
-    return false;
-}
-
-int leftMost(int x) {
-    int l = 0, r = arr.size() - 1, m;
-
-    while (l <= r) {
-        m = l + (r - l) / 2;
-
-        if (arr[m] == x && l == 0 && r == arr.size() - 1) {
-            return m;
-        }
-
-        if (arr[m] == x) {
-            return l;
-        }
-
-        if (arr[m] < x) {
-            l = m + 1;
-        } else {
-            r = m - 1;
-        }
-    }
-
-    return -1;
-}
-
-int rightMost(int x) {
-    int l = 0, r = arr.size() - 1, m;
-
-    while (l < r) {
-        m = l + (r - l) / 2;
-
-        if (arr[m] == x && l == 0 && r == arr.size() - 1) {
-            return m;
-        }
-
-        if (arr[m] == x) {
-            return r;
-        }
-
-        if (arr[m] < x) {
-            l = m + 1;
-        } else {
-            r = m - 1;
-        }
-    }
-
-    return -1;
-}
-
-int find_bs(int x) {
-    int l = 0, r = arr.size(), m;
-
-    while (l < r) {
-        m = l + (r - l) / 2;
-
-        if (arr[m] == x) {
-            return m;
-        }
-
-        if (arr[m] < x) {
-            l = m + 1;
-        } else {
-            r = m - 1;
-        }
-    }
-
-    return r;
-}
 
 int main() {
+    int N, Q, x;
     cin >> N;
 
-    arr = vector<int>(N - 1);
+    vector<int> arr(N);
 
     for (int i = 0; i < N; ++i) {
         cin >> arr[i];
@@ -108,13 +19,17 @@ int main() {
     cin >> Q;
 
     while (Q--) {
-        cin >> elem;
+        cin >> x;
 
-        // cout << bs(elem) << endl;
-        if (bs(elem)) {
-            cout << leftMost(elem) << " " << rightMost(elem) << endl;
+        auto lower_b = lower_bound(arr.begin(), arr.end(), x);
+
+        if (*lower_b != x) {
+            cout << lower_b - arr.begin() << endl;
         } else {
-            cout << find_bs(elem) << endl;
+            auto upper_b = upper_bound(arr.begin(), arr.end(), x);
+
+            cout << lower_b - arr.begin() << " ";
+            cout << upper_b - arr.begin() - 1 << endl;
         }
     }
 
