@@ -59,92 +59,8 @@ private:
     Node *head, *tail;
 };
 
-void solve(LinkedList& num1, LinkedList& num2){
-    vector<ll> nums1 = num1.getNums();
-    vector<ll> nums2 = num2.getNums();
-
-    if (nums1.size() < nums2.size()) {
-        swap(nums1, nums2);
-    }
-
-    vector<ll> res(nums1.size() + 1, 0);
-
-    int totalCtr = nums1.size();
-
-    int i = 0;
-    int takeOver = 0;
-
-    for (; i < nums2.size(); ++i) {
-        if (takeOver != 0) {
-            int temp = i;
-
-            while (takeOver && temp < res.size()) {
-                res[temp] += takeOver;
-
-                if (res[temp] >= 10) {
-                    res[temp] -= 10;
-                    takeOver = 1;
-                } else {
-                    takeOver = 0;
-                }
-
-                temp++;
-            }
-
-            if (takeOver && temp == res.size()) {
-                res.push_back(1);
-                totalCtr++;
-                takeOver = 0;
-            }
-        }
-
-        res[i] = nums1[i] + nums2[i] + res[i];
-
-        if (res[i] >= 10) {
-            res[i] -= 10;
-            takeOver = 1;
-        } else {
-            takeOver = 0;
-        }
-    }
-
-    for (; i < nums1.size(); ++i) {
-        if (takeOver != 0) {
-            int temp = i;
-
-            while (takeOver && temp < res.size()) {
-                res[temp] += takeOver;
-
-                if (res[temp] >= 10) {
-                    res[temp] -= 10;
-                    takeOver = 1;
-                } else {
-                    takeOver = 0;
-                }
-
-                temp++;
-            }
-
-            if (takeOver && temp == res.size()) {
-                res.push_back(1);
-                totalCtr++;
-                takeOver = 0;
-            }
-        }
-
-        res[i] = nums1[i] + res[i];
-
-        if (res[i] >= 10) {
-            res[i] -= 10;
-            takeOver = 1;
-        } else {
-            takeOver = 0;
-        }
-    }
-
+void handleTakeOver(int &takeOver, int &totalCtr, int temp, vector<ll> &res) {
     if (takeOver != 0) {
-        int temp = i;
-
         while (takeOver && temp < res.size()) {
             res[temp] += takeOver;
 
@@ -164,6 +80,50 @@ void solve(LinkedList& num1, LinkedList& num2){
             takeOver = 0;
         }
     }
+}
+
+void solve(LinkedList& num1, LinkedList& num2){
+    vector<ll> nums1 = num1.getNums();
+    vector<ll> nums2 = num2.getNums();
+
+    if (nums1.size() < nums2.size()) {
+        swap(nums1, nums2);
+    }
+
+    vector<ll> res(nums1.size() + 1, 0);
+
+    int totalCtr = nums1.size();
+
+    int i = 0;
+    int takeOver = 0;
+
+    for (; i < nums2.size(); ++i) {
+        handleTakeOver(takeOver, totalCtr, i, res);
+
+        res[i] = nums1[i] + nums2[i] + res[i];
+
+        if (res[i] >= 10) {
+            res[i] -= 10;
+            takeOver = 1;
+        } else {
+            takeOver = 0;
+        }
+    }
+
+    for (; i < nums1.size(); ++i) {
+        handleTakeOver(takeOver, totalCtr, i, res);
+
+        res[i] = nums1[i] + res[i];
+
+        if (res[i] >= 10) {
+            res[i] -= 10;
+            takeOver = 1;
+        } else {
+            takeOver = 0;
+        }
+    }
+
+    handleTakeOver(takeOver, totalCtr, i, res);
 
     if (nums1.size() == nums2.size()) {
         totalCtr++;
