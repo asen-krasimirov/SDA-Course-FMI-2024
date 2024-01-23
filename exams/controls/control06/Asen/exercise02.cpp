@@ -5,41 +5,46 @@
 #include <algorithm>
 
 #include <queue>
+#include <climits>
 
 using namespace std;
 
-/* 38.89/100 solution */
+typedef long long ll;
 
-size_t INF = 1000000007;
+ll N, M, x, y, w;
+vector<vector<pair<ll, ll>>> adj;
+vector<pair<ll, ll>> distTo;
+const ll INF = 1000000007;
 
-size_t N, M, x, y, c;
+void dijkstra(ll s) {
+    priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, greater<>> pq;
 
-void dijkstra(size_t s, vector<vector<pair<size_t, size_t>>> &adj, vector<size_t> &distTo) {
-    distTo[s] = 0;
-
-    priority_queue<pair<size_t, size_t>, vector<pair<size_t, size_t>>, greater<>> pq;
     pq.push({ 0, s });
+    distTo[s] = { 1, 0 };
 
     while (!pq.empty()) {
-        size_t v = pq.top().second;
-        size_t v_d = pq.top().first;
+        ll v_d = pq.top().first;
+        ll v = pq.top().second;
         pq.pop();
 
-        if (v_d != distTo[v]) {
+        if (v_d != distTo[v].second) {
             continue;
         }
 
-        for (auto &e : adj[v]) {
-            size_t w_d = e.first;
-            size_t w = e.second;
+        for (auto n : adj[v]) {
+            ll w_d = n.first;
+            ll w = n.second;
 
-            size_t new_d = v_d + w_d;
+            ll new_d = v_d + w_d % INF;
 
-            if (new_d <= distTo[w]) {
-                distTo[w] = new_d;
-                pq.push({ distTo[w], w });
+            if (distTo[w].second > new_d) {
+                distTo[w].second = new_d;
+                distTo[w].first = distTo[v].first;
+
+                pq.push({ new_d, w });
+            } else if (distTo[w].second == new_d) {
+                distTo[w].first =  (distTo[w].first + distTo[v].first) % INF;
             }
-
         }
     }
 }
@@ -48,26 +53,26 @@ int main() {
     cin >> N >> M;
     N++;
 
-    vector<vector<pair<size_t, size_t>>> adj = vector<vector<pair<size_t, size_t>>>(N, vector<pair<size_t, size_t>>());
-    vector<size_t> distTo = vector<size_t>(N, INF);
+    adj = vector<vector<pair<ll, ll>>>(N, vector<pair<ll, ll>>());
+    distTo = vector<pair<ll, ll>>(N, { 0, LONG_MAX });
 
-    for (size_t i = 0; i < M; ++i) {
-        cin >> x >> y >> c;
-
-        adj[x].push_back({ c, y });
+    for (int i = 0; i < M; ++i) {
+        cin >> x >> y >> w;
+        adj[x].push_back({ w, y });
     }
 
-    dijkstra(1, adj, distTo);
+    dijkstra(1);
 
     N--;
+    ll res = distTo[N].second;
 
-    size_t res = distTo[N];
-
-    if (res == INF) {
-        cout << -1 << " " << 0;
+    if (res != LONG_MAX) {
+        cout << res;
     } else {
-        cout << res << " " << 1;
+        cout << -1;
     }
+
+    cout << " " << distTo[N].first;
 
     return 0;
 }
