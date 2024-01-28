@@ -13,8 +13,6 @@
 
 You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
 
-Exams from past years <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a>.
-
 ### More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
 <pre>
@@ -33,6 +31,9 @@ Exams from past years <a href="https://github.com/asen-krasimirov/SDA-Course-FMI
 13. Exam Preparation:                <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/13">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-13-2023/challenges">Homework 13</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework13">solutions</a>) <br/>
 14. Exam Preparation:                <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/14">Lab</a><br/>
 </pre>
+
+Exams from past years <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a>.
+
 ###### * Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
 ###### ** Lab Exercises from <a href="https://github.com/ViktorGV">ViktorGV</a>'s seminars and solutions from <a href="https://github.com/asen-krasimirov">Asen</a>.
 ###### *** In case of discrepancy, write to the contributors.
