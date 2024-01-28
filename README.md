@@ -1,4 +1,4 @@
-# SDA-Course-FMI-2024
+![image](https://github.com/asen-krasimirov/SDA-Course-FMI-2024/assets/68907559/03cfc902-a8d8-44a8-a16a-3a7c15680981)# SDA-Course-FMI-2024
 ## A repository for uploading exercises from the FMI SDA (Data Structures and Algorithms) Course 2023-2024.
 
 ### Control Exam contest links ( and solutions* ):
@@ -12,6 +12,8 @@
 </pre>
 
 You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
+
+Exams from past years <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a>.
 
 ### More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
