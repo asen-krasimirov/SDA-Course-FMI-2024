@@ -8,55 +8,64 @@
 
 using namespace std;
 
+/* 13.33 for some reason */
+
 struct Friend {
-    int a, l, takenSeat;
+    int a, l, i, takenSeat;
 };
 
 struct compareFriends {
-    bool operator()(const pair<Friend, int> &first, const pair<Friend, int> &second) {
-        if (first.first.a == second.first.a) {
-            return first.first.l < second.first.l;
+    bool operator()(const Friend &first, const Friend &second) {
+        if (first.l == second.l) {
+            return first.a > second.a;
         }
-        return first.first.a > second.first.a;
+        return first.l > second.l;
     }
 };
+
+bool cmp(const Friend &first, const Friend &second) {
+    return first.a < second.a;
+}
 
 int main() {
     int N, a, l, T;
     cin >> N;
 
-    // queue<pair<int, int>> q;
-    priority_queue<pair<Friend, int>, vector<pair<Friend, int>>, compareFriends> pq;
+    // priority_queue<Friend, vector<Friend>, compareFriends> friends;
+    vector<Friend> friends;
+    priority_queue<int, vector<int>, greater<>> seats;
 
     for (int i = 0; i < N; ++i) {
         cin >> a >> l;
-        pq.push({{ a, l, -1 }, i});
-    }
-
-    cin >> T;
-
-    priority_queue<int, vector<int>, greater<int>> seats;
-
-    for (int i = 0; i < N; ++i) {
+        friends.push_back({ a, l, i });
         seats.push(i);
     }
 
-    while (!pq.empty()) {
-        auto top = pq.top();
-        pq.pop();
+    sort(friends.begin(), friends.end(), cmp);
 
-        while (!pq.empty() && top.first.a > pq.top().first.l) {
-            seats.push(pq.top().first.takenSeat);
+    priority_queue<Friend, vector<Friend>, compareFriends> pq;
+
+    cin >> T;
+
+    // while (!friends.empty()) {
+    for (int i = 0; i < N; ++i) {
+        Friend top = friends[i];
+
+        pq.push(top);
+
+        while (!pq.empty() && top.a >= pq.top().l) {
+            seats.push(pq.top().takenSeat);
             pq.pop();
         }
 
         int freeSeat = seats.top();
         seats.pop();
-        top.first.takenSeat = freeSeat;
 
-        if (top.second == T) {
+        if (top.i == T) {
             cout << freeSeat;
             break;
+        } else {
+            top.takenSeat = freeSeat;
         }
     }
 
