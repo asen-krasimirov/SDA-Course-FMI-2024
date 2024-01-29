@@ -9,3 +9,6 @@ Queue and Stack && Binary Search Tree:
 
 AVL and Red-Black Trees && Heap:
 - Task04: https://www.hackerrank.com/contests/sda-20232024-test-4/challenges/challenge-4442
+
+Shortest Path in Graph && Minimum Spanning Three in Graph:
+- Task05: https://www.hackerrank.com/contests/6-20232024/challenges/shortest-paths-2
