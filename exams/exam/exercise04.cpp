@@ -59,8 +59,6 @@ ll kruskal(vector<pair<ll, pair<ll, ll>>> &edges, ll K, ll V) {
             continue;
         }
 
-        // cout << i << " " << nodes[i] + 1 << " " << sums[i] << endl;
-
         if ((nodes[i] + 1) % K == 0) {
             totalW += sums[i];
         }
