@@ -20,24 +20,18 @@ int main() {
         unordered_map<int, int> us;
 
         int mostCommon = INT_MIN;
-        // char mostCommonChar = '';
 
         int leastCommon = INT_MAX;
-        // char leastCommonChar = '\0';
 
         for (auto e : um) {
             if (e.second > mostCommon) {
                 mostCommon = e.second;
             } else if (e.second < leastCommon) {
                 leastCommon = e.second;
-                // leastCommonChar
             }
 
-            // us.insert(e.second);
             us[e.second]++;
         }
-
-        // us.erase(1);
 
         if ((mostCommon - 1 == leastCommon && us[mostCommon] == 1) || (leastCommon == 1 && us[leastCommon] == 1 && us.size() == 2)) {
             cout << 1 << endl;
