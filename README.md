@@ -13,6 +13,13 @@
 
 You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
 
+### Exam
+<pre>
+<a href="https://www.hackerrank.com/contests/2023-2024-2/challenges">Contest link</a> | (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/exam">solutions</a>)
+</pre>
+
+See <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a> to see past years exams solved.
+
 ### More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
 <pre>
