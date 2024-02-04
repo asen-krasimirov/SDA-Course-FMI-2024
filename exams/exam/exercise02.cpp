@@ -25,7 +25,6 @@ int main() {
         auto lower_b = lower_bound(arr.begin(), arr.end(), x);
         auto upper_b = upper_bound(arr.begin(), arr.end(), x);
 
-
         if (lower_b != arr.end()) {
             cout << *(lower_b + 1) << endl;
         } else {
