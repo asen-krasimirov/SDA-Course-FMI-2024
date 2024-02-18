@@ -13,6 +13,13 @@
 
 You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
 
+### Exam
+<pre>
+<a href="https://www.hackerrank.com/contests/2023-2024-2/challenges">Contest link</a> | (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/exam">solutions</a>)
+</pre>
+
+Click <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a> to see past years exams solved.
+
 ### More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
 <pre>
@@ -28,11 +35,9 @@ You can also see exercises for preparation <a href="https://github.com/asen-kras
 10. Graphs:                          <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/10">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-10-2023/challenges">Homework 10</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework10">solutions</a>) <br/>
 11. Shortest Path in Graph:          <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/11">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-11-2023/challenges">Homework 11</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework11">solutions</a>) <br/>
 12. Minimum Spanning Tree in Graph:  <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/12">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-12-2023/challenges">Homework 12</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework12">solutions</a>) <br/>
-13. Exam Preparation:                <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/13">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-13-2023/challenges">Homework 13</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework13">solutions</a>) <br/>
-14. Exam Preparation:                <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/14">Lab</a><br/>
+13. Exam Preparation I:              <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/13">Lab</a> | <a href="https://www.hackerrank.com/sda-hw-13-2023/challenges">Homework 13</a> (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/homeworks/homework13">solutions</a>) <br/>
+14. Exam Preparation II:             <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/14">Lab</a><br/>
 </pre>
-
-Exams from past years <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a>.
 
 ###### * Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
 ###### ** Lab Exercises from <a href="https://github.com/ViktorGV">ViktorGV</a>'s seminars and solutions from <a href="https://github.com/asen-krasimirov">Asen</a>.
