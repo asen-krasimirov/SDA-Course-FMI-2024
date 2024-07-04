@@ -44,4 +44,4 @@ A repository for uploading exercises from the FMI SDA (Data Structures and Algor
  > [!IMPORTANT]
 > ##### * Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
 > ##### ** Lab Exercises from <a href="https://github.com/ViktorGV">ViktorGV</a>'s seminars and solutions from <a href="https://github.com/asen-krasimirov">Asen</a>.
-> ##### *** In case of discrepancy, write to the contributors.
+> ##### In case of discrepancy, write to the contributors.
