@@ -11,14 +11,16 @@ A repository for uploading exercises from the FMI SDA (Data Structures and Algor
 - <a href="https://www.hackerrank.com/contests/6-20232024/challenges">Exam 06</a> (Shortest Path in Graph && Minimum Spanning Three in Graph) (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controls/control06">solutions</a>) <br/>
 </pre>
 
-You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
+> [!NOTE]
+> You can also see exercises for preparation <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/controlsPrep">here</a>.
 
 ### Exam
 <pre>
 <a href="https://www.hackerrank.com/contests/2023-2024-2/challenges">Contest link</a> | (<a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/exam">solutions</a>)
 </pre>
 
-Click <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a> to see past years exams solved.
+> [!NOTE]
+> Click <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exams/mainExamPrep">here</a> to see past years exams solved.
 
 ### More Content:
 ######  Lab Exercises** | Homework contest links ( and solutions* ):
@@ -39,6 +41,7 @@ Click <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/maste
 14. Exam Preparation II:             <a href="https://github.com/asen-krasimirov/SDA-Course-FMI-2024/tree/master/exercises/14">Lab</a><br/>
 </pre>
 
-###### * Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
-###### ** Lab Exercises from <a href="https://github.com/ViktorGV">ViktorGV</a>'s seminars and solutions from <a href="https://github.com/asen-krasimirov">Asen</a>.
-###### *** In case of discrepancy, write to the contributors.
+ > [!IMPORTANT]
+> ##### * Solutions are not always optimal in terms of memory and speed efficiency, even clean code (they pass all tests 100/100, but there are better solutions)
+> ##### ** Lab Exercises from <a href="https://github.com/ViktorGV">ViktorGV</a>'s seminars and solutions from <a href="https://github.com/asen-krasimirov">Asen</a>.
+> ##### *** In case of discrepancy, write to the contributors.
